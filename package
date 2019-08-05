@@ -1,0 +1,12 @@
+不同目录下python 模块引入方式：
+1.需要引用其他路径的py文件，需要用sys.path.append(" ")把那个py文件所在的路径引用进来，之后就可以使用该py文件中的类与函数。
+
+2.被引用进来的是py文件，所以使用其类与函数的时候需要用文件名作为索引。故使用sayHello函数需要加上文件名aa.sayHello（）
+
+3.如果需要引用类，可以使用form,,import的方式，这样可以直接调用类中的函数，而无需再类初始化的时候加上文件名。
+
+import sys
+ 
+sys.path.append('../A/')
+ 
+from aa import classA
